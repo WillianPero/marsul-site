@@ -1,5 +1,8 @@
 import './Products.css'
 
+import texturizadoImage from '../../assets/images/texturizado-01.jpeg'
+import fiadoImage from '../../assets/images/fiado-01.jpeg'
+
 const whatsappTexturized =
   'Olá! Vim pelo site da Marsul e gostaria de obter mais informações sobre o Fio 100% Poliéster Texturizado, incluindo disponibilidade, cores e condições comerciais. Poderiam me ajudar?'
 
@@ -22,9 +25,10 @@ const products = [
       'Fio desenvolvido para aplicações da indústria têxtil, oferecendo qualidade, regularidade e desempenho para diferentes necessidades de produção.',
     specifications: ['150/48', '75/36'],
     colors: ['Natural', 'Preto TM', 'Branco TM'],
-    image: '/src/assets/images/texturizado-01.jpeg',
+    image: texturizadoImage,
     whatsappLink: whatsappTexturizedLink,
   },
+
   {
     number: '02',
     title: 'Fio 100% Poliéster Fiado',
@@ -32,7 +36,7 @@ const products = [
       'Solução em fio de poliéster fiado desenvolvida para atender diferentes aplicações têxteis, combinando versatilidade, qualidade e confiabilidade.',
     specifications: ['44/2', '30/1'],
     colors: ['Natural', 'Branco', 'Preto'],
-    image: '/src/assets/images/fiado-01.jpeg',
+    image: fiadoImage,
     whatsappLink: whatsappSpunLink,
   },
 ]
@@ -40,11 +44,13 @@ const products = [
 function Products() {
   return (
     <section className="products" id="produtos">
+
       <div className="products-container">
 
         <div className="products-header">
 
           <div>
+
             <span className="section-label">
               NOSSOS PRODUTOS
             </span>
@@ -53,6 +59,7 @@ function Products() {
               Soluções têxteis para
               <span> diferentes necessidades.</span>
             </h2>
+
           </div>
 
           <p>
@@ -66,6 +73,7 @@ function Products() {
         <div className="products-grid">
 
           {products.map((product) => (
+
             <article
               className="product-card"
               key={product.number}
@@ -118,12 +126,14 @@ function Products() {
                     <div className="specification-list">
 
                       {product.specifications.map((specification) => (
+
                         <span
                           className="specification-tag"
                           key={specification}
                         >
                           {specification}
                         </span>
+
                       ))}
 
                     </div>
@@ -141,12 +151,14 @@ function Products() {
                     <div className="specification-list">
 
                       {product.colors.map((color) => (
+
                         <span
                           className="specification-tag"
                           key={color}
                         >
                           {color}
                         </span>
+
                       ))}
 
                     </div>
@@ -174,6 +186,7 @@ function Products() {
               </div>
 
             </article>
+
           ))}
 
         </div>
@@ -211,6 +224,7 @@ function Products() {
         </div>
 
       </div>
+
     </section>
   )
 }
