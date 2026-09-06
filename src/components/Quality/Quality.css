@@ -1,0 +1,294 @@
+.quality {
+  padding: 115px 0;
+  background: #ffffff;
+}
+
+.quality-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================
+   CABEÇALHO DA SEÇÃO
+========================= */
+
+.quality-header {
+  max-width: 760px;
+  margin-bottom: 65px;
+}
+
+.quality-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+
+  color: #b38a20;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.quality-label::before {
+  content: "";
+
+  width: 35px;
+  height: 2px;
+
+  background: #d8ad32;
+}
+
+.quality-header h2 {
+  margin: 0;
+
+  color: #102b4e;
+
+  font-size: 48px;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.quality-header h2 span {
+  display: block;
+
+  color: #687b91;
+  font-weight: 400;
+}
+
+.quality-header p {
+  max-width: 700px;
+
+  margin-top: 25px;
+
+  color: #727d8b;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================
+   GRID DOS DIFERENCIAIS
+========================= */
+
+.quality-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.quality-card {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 34px 30px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e4e9ee;
+
+  border-radius: 6px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.quality-card:hover {
+  transform: translateY(-7px);
+
+  background: #ffffff;
+
+  border-color: #d4dce5;
+
+  box-shadow:
+    0 20px 45px rgba(16, 43, 78, 0.10);
+}
+
+/* =========================
+   ÍCONE
+========================= */
+
+.quality-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 35px;
+
+  background: #102b4e;
+
+  color: #e5bd45;
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.quality-card:hover .quality-icon {
+  transform: translateY(-3px);
+
+  background: #183d69;
+}
+
+.quality-icon svg {
+  width: 27px;
+  height: 27px;
+
+  display: block;
+}
+
+/* =========================
+   TÍTULO DO CARD
+========================= */
+
+.quality-card h3 {
+  margin: 0 0 14px;
+
+  color: #102b4e;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* =========================
+   TEXTO DO CARD
+========================= */
+
+.quality-card p {
+  margin: 0;
+
+  color: #727d8b;
+
+  font-size: 13px;
+  line-height: 1.75;
+
+  text-align: center;
+}
+
+/* =========================
+   TEXTO INFERIOR
+========================= */
+
+.quality-link {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 28px;
+
+  color: #b38a20;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.quality-link::after {
+  content: " →";
+
+  font-size: 14px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .quality-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+  .quality {
+    padding: 80px 0;
+  }
+
+  .quality-container {
+    width: calc(100% - 32px);
+  }
+
+  .quality-header {
+    margin-bottom: 45px;
+  }
+
+  .quality-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .quality-header h2 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .quality-header p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .quality-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .quality-card {
+    min-height: 270px;
+
+    padding: 30px 25px;
+  }
+
+  .quality-icon {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 28px;
+  }
+
+  .quality-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .quality-card h3 {
+    font-size: 20px;
+  }
+
+  .quality-card p {
+    font-size: 13px;
+  }
+
+  .quality-link {
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+  }
+}

@@ -1,0 +1,468 @@
+/* ================================
+   HERO - MARSUL
+================================ */
+
+.hero {
+  min-height: 100vh;
+
+  /* Espaço para o Header fixo de 120px */
+  padding-top: 160px;
+  padding-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(30, 76, 126, 0.08),
+      transparent 30%
+    ),
+    #f6f8fa;
+
+  overflow: hidden;
+}
+
+/* ================================
+   CONTAINER
+================================ */
+
+.hero-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.hero-content {
+  max-width: 650px;
+}
+
+/* TEXTO SUPERIOR */
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+
+  color: #56708f;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.hero-label::before {
+  content: "";
+
+  width: 35px;
+  height: 2px;
+
+  background: #56708f;
+}
+
+/* ================================
+   TÍTULO
+================================ */
+
+.hero h1 {
+  margin: 0;
+
+  color: #102b4e;
+
+  font-size: clamp(48px, 5vw, 72px);
+
+  font-weight: 700;
+
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #61758e;
+
+  font-weight: 400;
+}
+
+/* ================================
+   DESCRIÇÃO
+================================ */
+
+.hero-description {
+  max-width: 590px;
+
+  margin-top: 28px;
+
+  color: #667181;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 38px;
+}
+
+.hero-primary,
+.hero-secondary {
+  min-height: 54px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 26px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.hero-primary {
+  gap: 16px;
+
+  background: #102b4e;
+
+  color: #ffffff;
+}
+
+.hero-primary span {
+  font-size: 20px;
+
+  transition: transform 0.25s ease;
+}
+
+.hero-primary:hover {
+  background: #1b426d;
+
+  transform: translateY(-2px);
+}
+
+.hero-primary:hover span {
+  transform: translateX(4px);
+}
+
+/* BOTÃO SECUNDÁRIO */
+
+.hero-secondary {
+  color: #102b4e;
+
+  border: 1px solid #cfd6df;
+
+  background: transparent;
+}
+
+.hero-secondary:hover {
+  background: #ffffff;
+
+  border-color: #102b4e;
+
+  transform: translateY(-2px);
+}
+
+/* ================================
+   QUALIDADE / CONFIANÇA / EFICIÊNCIA
+================================ */
+
+.hero-trust {
+  display: flex;
+
+  margin-top: 55px;
+
+  padding-top: 27px;
+
+  border-top: 1px solid #dde2e8;
+}
+
+.hero-trust div {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-right: 25px;
+
+  margin-right: 25px;
+
+  border-right: 1px solid #dde2e8;
+}
+
+.hero-trust div:last-child {
+  border-right: none;
+
+  margin-right: 0;
+
+  padding-right: 0;
+}
+
+.hero-trust strong {
+  color: #102b4e;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.hero-trust span {
+  margin-top: 5px;
+
+  color: #89919d;
+
+  font-size: 11px;
+}
+
+/* ================================
+   LADO DIREITO / IMAGEM
+================================ */
+
+.hero-visual {
+  position: relative;
+
+  height: 570px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 70px rgba(16, 43, 78, 0.12);
+
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+/* ================================
+   CARD FLUTUANTE
+================================ */
+
+.hero-floating-card {
+  position: absolute;
+
+  left: -45px;
+
+  bottom: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 19px 23px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 15px 45px rgba(16, 43, 78, 0.15);
+
+  border-radius: 5px;
+}
+
+.floating-icon {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf3f8;
+
+  color: #102b4e;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.hero-floating-card strong {
+  display: block;
+
+  color: #102b4e;
+
+  font-size: 13px;
+}
+
+.hero-floating-card p {
+  margin: 4px 0 0;
+
+  color: #8a929d;
+
+  font-size: 11px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+
+  .hero {
+    padding-top: 150px;
+
+    padding-bottom: 70px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .hero-content {
+    max-width: 750px;
+  }
+
+  .hero-visual {
+    height: 500px;
+  }
+
+  .hero-floating-card {
+    left: 25px;
+  }
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 650px) {
+
+  .hero {
+    min-height: auto;
+
+    padding-top: 120px;
+
+    padding-bottom: 60px;
+  }
+
+  .hero-container {
+    width: calc(100% - 32px);
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .hero-label {
+    margin-bottom: 22px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    margin-top: 22px;
+
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-top: 30px;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+  }
+
+  .hero-trust {
+    gap: 15px;
+
+    margin-top: 40px;
+  }
+
+  .hero-trust div {
+    flex: 1;
+
+    padding-right: 10px;
+
+    margin-right: 0;
+  }
+
+  .hero-trust strong {
+    font-size: 12px;
+  }
+
+  .hero-trust span {
+    font-size: 9px;
+  }
+
+  .hero-visual {
+    height: 400px;
+  }
+
+  .hero-floating-card {
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 20px;
+  }
+}

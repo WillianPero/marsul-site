@@ -1,0 +1,308 @@
+/* ================================
+   CONTATO
+================================ */
+
+.contact {
+  padding: 110px 0;
+  background: #ffffff;
+}
+
+.contact-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.contact-content {
+  max-width: 650px;
+}
+
+.contact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #b38a20;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.contact-label::before {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #d8ad32;
+}
+
+.contact-content h2 {
+  margin: 0;
+  color: #102b4e;
+  font-size: 46px;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.contact-content h2 span {
+  display: block;
+  color: #687b91;
+  font-weight: 400;
+}
+
+.contact-content > p {
+  max-width: 570px;
+  margin-top: 25px;
+  color: #727d8b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ================================
+   INFORMAÇÕES DE CONTATO
+================================ */
+
+.contact-info {
+  max-width: 520px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.contact-item:hover {
+  background: #f7f9fb;
+  border-color: #e4e9ee;
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf3f8;
+  color: #102b4e;
+  border-radius: 50%;
+}
+
+.contact-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.contact-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item span {
+  margin-bottom: 4px;
+  color: #7d8794;
+  font-size: 12px;
+}
+
+.contact-item strong {
+  display: block;
+  color: #102b4e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================================
+   WHATSAPP
+================================ */
+
+.contact-whatsapp .whatsapp-icon {
+  background: #edf8f2;
+  color: #168a50;
+}
+
+.contact-whatsapp:hover {
+  background: #f5fbf7;
+  border-color: #d9eee2;
+}
+
+.contact-whatsapp strong {
+  color: #102b4e;
+}
+
+/* ================================
+   ÁREA DE ATENDIMENTO
+================================ */
+
+.contact-form-wrapper {
+  padding: 42px;
+  background: #f6f8fa;
+  border: 1px solid #e1e6eb;
+  box-shadow: 0 25px 60px rgba(16, 43, 78, 0.08);
+  border-radius: 6px;
+}
+
+.contact-form-header span {
+  color: #b38a20;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contact-form-header h3 {
+  margin: 10px 0 14px;
+  color: #102b4e;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.contact-form-header p {
+  margin: 0 0 30px;
+  color: #727d8b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ================================
+   BOTÃO WHATSAPP
+================================ */
+
+.contact-whatsapp-button {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 22px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background: #168a50;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-whatsapp-button:hover {
+  background: #117441;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(22, 138, 80, 0.18);
+}
+
+.contact-whatsapp-button svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ================================
+   TEXTO DE APOIO
+================================ */
+
+.contact-direct-message {
+  margin-top: 18px;
+  text-align: center;
+  color: #8a949f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-content {
+    max-width: 750px;
+  }
+
+  .contact-form-wrapper {
+    max-width: 750px;
+    box-sizing: border-box;
+  }
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact-container {
+    width: calc(100% - 32px);
+    gap: 45px;
+  }
+
+  .contact-content h2 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .contact-content > p {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .contact-item {
+    padding: 12px;
+  }
+
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-form-wrapper {
+    padding: 28px 22px;
+  }
+
+  .contact-form-header h3 {
+    font-size: 26px;
+  }
+
+  .contact-whatsapp-button {
+    min-height: 54px;
+    font-size: 12px;
+  }
+}

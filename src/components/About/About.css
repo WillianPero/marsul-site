@@ -1,0 +1,296 @@
+/* ================================
+   SOBRE A MARSUL
+================================ */
+
+.about {
+  padding: 110px 0;
+
+  background: #f6f8fa;
+}
+
+.about-container {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+
+  align-items: center;
+
+  gap: 90px;
+}
+
+/* ================================
+   IMAGEM
+================================ */
+
+.about-image {
+  position: relative;
+
+  width: 100%;
+  height: 560px;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 25px 60px rgba(16, 43, 78, 0.12);
+
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.03);
+}
+
+/* DETALHE DOURADO */
+
+.about-image::after {
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+  bottom: 12px;
+
+  width: 90px;
+  height: 4px;
+
+  background: #d8ad32;
+}
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.about-content {
+  max-width: 580px;
+}
+
+.about-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: #b38a20;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.about-label::before {
+  content: "";
+
+  width: 35px;
+  height: 2px;
+
+  background: #d8ad32;
+}
+
+/* ================================
+   TÍTULO
+================================ */
+
+.about-content h2 {
+  margin: 0 0 30px;
+
+  color: #102b4e;
+
+  font-size: 48px;
+
+  line-height: 1.12;
+
+  letter-spacing: -2px;
+}
+
+.about-content h2 span {
+  display: block;
+
+  color: #687b91;
+
+  font-weight: 400;
+}
+
+/* ================================
+   TEXTOS
+================================ */
+
+.about-content p {
+  margin: 0 0 18px;
+
+  color: #727d8b;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ================================
+   DESTAQUES
+================================ */
+
+.about-highlights {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid #dde2e8;
+
+  border-bottom: 1px solid #dde2e8;
+}
+
+.about-highlights div {
+  padding: 22px 18px;
+
+  border-right: 1px solid #dde2e8;
+}
+
+.about-highlights div:last-child {
+  border-right: none;
+}
+
+.about-highlights strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d1a62f;
+
+  font-size: 13px;
+
+  letter-spacing: 1.5px;
+}
+
+.about-highlights span {
+  color: #102b4e;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+/* ================================
+   BOTÃO
+================================ */
+
+.about-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 52px;
+
+  margin-top: 35px;
+
+  padding: 0 24px;
+
+  background: #102b4e;
+
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.about-button:hover {
+  background: #1b426d;
+
+  transform: translateY(-2px);
+}
+
+.about-button span {
+  color: #e5bd45;
+
+  font-size: 18px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .about-content {
+    max-width: 750px;
+  }
+
+  .about-image {
+    height: 500px;
+  }
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-container {
+    width: calc(100% - 32px);
+  }
+
+  .about-image {
+    height: 390px;
+  }
+
+  .about-content h2 {
+    font-size: 38px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights div {
+    border-right: none;
+
+    border-bottom: 1px solid #dde2e8;
+  }
+
+  .about-highlights div:last-child {
+    border-bottom: none;
+  }
+}

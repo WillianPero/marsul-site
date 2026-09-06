@@ -1,0 +1,344 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  position: relative;
+
+  background-color: #0b1f36;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(7, 25, 45, 0.86);
+
+  z-index: 1;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 75px 0 65px;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  gap: 80px;
+}
+
+/* =========================
+   MARCA
+========================= */
+
+.footer-brand {
+  max-width: 430px;
+}
+
+/* LOGO */
+
+.footer-logo {
+  display: block;
+
+  width: 145px;
+  height: auto;
+
+  margin-bottom: 22px;
+
+  object-fit: contain;
+}
+
+/* DESCRIÇÃO */
+
+.footer-brand p {
+  max-width: 390px;
+
+  margin: 0 0 25px;
+
+  color: #d0d8e1;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.footer-whatsapp span {
+  color: #d8ad32;
+
+  font-size: 17px;
+}
+
+.footer-whatsapp:hover {
+  color: #d8ad32;
+
+  gap: 15px;
+}
+
+/* =========================
+   COLUNAS
+========================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TÍTULOS */
+
+.footer-title {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #d8ad32;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.footer-links a {
+  width: fit-content;
+
+  color: #c0cad5;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+
+  transform: translateX(4px);
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.footer-contact a {
+  width: fit-content;
+
+  color: #c0cad5;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: color 0.25s ease;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   BARRA INFERIOR
+========================= */
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom-container {
+  width: min(1180px, calc(100% - 48px));
+
+  min-height: 75px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-bottom p,
+.footer-bottom span {
+  margin: 0;
+
+  color: #9ba9b8;
+
+  font-size: 11px;
+}
+
+.footer-bottom span {
+  color: #b4bec9;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 55px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    max-width: 600px;
+  }
+
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+  .footer {
+    background-position: center;
+  }
+
+  .footer-overlay {
+    background: rgba(7, 25, 45, 0.9);
+  }
+
+  .footer-container {
+    width: calc(100% - 32px);
+
+    padding: 55px 0 45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  /* LOGO */
+
+  .footer-logo {
+    width: 125px;
+
+    margin-bottom: 20px;
+  }
+
+  /* DESCRIÇÃO */
+
+  .footer-brand p {
+    font-size: 13px;
+  }
+
+  /* RODAPÉ INFERIOR */
+
+  .footer-bottom-container {
+    width: calc(100% - 32px);
+
+    min-height: auto;
+
+    padding: 22px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom span {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 420px) {
+
+  .footer-container {
+    padding: 48px 0 40px;
+  }
+
+  .footer-logo {
+    width: 115px;
+  }
+
+  .footer-brand p {
+    font-size: 12px;
+  }
+
+  .footer-links a,
+  .footer-contact a {
+    font-size: 12px;
+  }
+
+}
